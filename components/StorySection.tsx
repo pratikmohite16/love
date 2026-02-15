@@ -43,7 +43,7 @@ export default function StorySection() {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="relative overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-gold/30 romantic-glow">
               <Image
                 src="/love/image2.jpeg"
                 alt="Between worlds"
@@ -55,9 +55,9 @@ export default function StorySection() {
               <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-transparent" />
             </div>
 
-            {/* Floating Light Effect */}
+            {/* Floating Light Effects */}
             <motion.div
-              className="absolute top-1/4 right-0 w-64 h-64 bg-rose/20 rounded-full blur-3xl"
+              className="absolute top-1/4 right-0 w-64 h-64 bg-deepRose/30 rounded-full blur-3xl"
               animate={{
                 x: [0, 30, 0],
                 y: [0, -30, 0],
@@ -65,17 +65,26 @@ export default function StorySection() {
               }}
               transition={{ duration: 8, repeat: Infinity }}
             />
+            <motion.div
+              className="absolute bottom-1/4 left-0 w-48 h-48 bg-gold/20 rounded-full blur-3xl"
+              animate={{
+                x: [0, -20, 0],
+                y: [0, 20, 0],
+                opacity: [0.2, 0.5, 0.2],
+              }}
+              transition={{ duration: 6, repeat: Infinity, delay: 1 }}
+            />
           </motion.div>
 
           {/* Animated Text Lines */}
-          <div className="space-y-4 text-center">
+          <div className="space-y-6 text-center">
             {lines.map((line, index) => (
               <motion.p
                 key={index}
-                className={`font-serif ${
+                className={`${
                   index === lines.length - 1
-                    ? 'text-2xl md:text-4xl text-gold'
-                    : 'text-3xl md:text-5xl text-offwhite'
+                    ? 'text-3xl md:text-5xl font-signature bg-gradient-to-r from-gold via-lightGold to-gold bg-clip-text text-transparent text-glow'
+                    : 'text-4xl md:text-6xl font-romantic font-light text-offwhite/90'
                 } leading-relaxed`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

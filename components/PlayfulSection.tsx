@@ -16,7 +16,7 @@ export default function PlayfulSection() {
           viewport={{ once: true }}
           whileHover={{ scale: 1.05, rotate: 5 }}
         >
-          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gold shadow-2xl">
+          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gold shadow-2xl romantic-glow">
             <Image
               src="/love/image3.jpeg"
               alt="When you care"
@@ -27,12 +27,12 @@ export default function PlayfulSection() {
 
           {/* Animated Glow Effect */}
           <motion.div
-            className="absolute inset-0 rounded-full border-4 border-gold"
+            className="absolute inset-0 rounded-full border-4 border-gold/50"
             animate={{
               boxShadow: [
-                '0 0 20px rgba(212, 175, 55, 0.3)',
-                '0 0 60px rgba(212, 175, 55, 0.8)',
-                '0 0 20px rgba(212, 175, 55, 0.3)',
+                '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(139, 44, 109, 0.2)',
+                '0 0 60px rgba(212, 175, 55, 0.8), 0 0 90px rgba(139, 44, 109, 0.4)',
+                '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(139, 44, 109, 0.2)',
               ],
             }}
             transition={{ duration: 3, repeat: Infinity }}
@@ -64,7 +64,7 @@ export default function PlayfulSection() {
         {/* Text Content */}
         <div className="space-y-8">
           <motion.p
-            className="text-4xl md:text-6xl font-serif text-rose leading-relaxed"
+            className="text-5xl md:text-7xl font-romantic font-light text-romanticPink leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -74,7 +74,7 @@ export default function PlayfulSection() {
           </motion.p>
 
           <motion.p
-            className="text-3xl md:text-5xl font-light text-offwhite/80 italic"
+            className="text-4xl md:text-6xl font-romantic font-light text-offwhite/80 italic"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -90,10 +90,10 @@ export default function PlayfulSection() {
             transition={{ duration: 1, delay: 0.9 }}
             viewport={{ once: true }}
           >
-            <p className="text-3xl md:text-5xl font-serif text-offwhite leading-relaxed">
-              But I've seen the way you light up
+            <p className="text-4xl md:text-6xl font-romantic text-offwhite/90 leading-relaxed">
+              But I&apos;ve seen the way you light up
             </p>
-            <p className="text-4xl md:text-6xl font-serif text-gold leading-relaxed">
+            <p className="text-5xl md:text-7xl font-signature bg-gradient-to-r from-gold via-lightGold to-gold bg-clip-text text-transparent leading-relaxed text-glow">
               when you truly care.
             </p>
 

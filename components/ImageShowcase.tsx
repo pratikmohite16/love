@@ -67,7 +67,7 @@ export default function ImageShowcase() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-3xl md:text-5xl font-serif leading-relaxed text-offwhite"
+            className="text-4xl md:text-6xl font-romantic font-light leading-relaxed text-offwhite/90"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -77,35 +77,34 @@ export default function ImageShowcase() {
           </motion.p>
 
           <motion.p
-            className="text-3xl md:text-5xl font-serif leading-relaxed"
+            className="text-4xl md:text-6xl font-romantic leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
           >
             On you, it looks like{' '}
-            <span className="text-gold font-bold relative">
+            <span className="font-signature text-5xl md:text-7xl bg-gradient-to-r from-gold via-lightGold to-gold bg-clip-text text-transparent relative">
               grace at 30,000 feet
               <motion.span
-                className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold"
+                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
                 viewport={{ once: true }}
               />
             </span>
-            .
           </motion.p>
 
           {/* Decorative Quote Mark */}
           <motion.div
-            className="text-9xl font-serif text-gold/20 leading-none"
+            className="text-9xl font-signature text-gold/30 leading-none"
             initial={{ opacity: 0, rotate: -10 }}
             whileInView={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 1 }}
             viewport={{ once: true }}
           >
-            "
+            &ldquo;
           </motion.div>
         </motion.div>
       </motion.div>

@@ -1,5 +1,6 @@
 'use client'
 
+import StardustBackground from '@/components/StardustBackground'
 import HeroSection from '@/components/HeroSection'
 import ImageShowcase from '@/components/ImageShowcase'
 import StorySection from '@/components/StorySection'
@@ -9,13 +10,16 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="relative">
-      <HeroSection />
-      <ImageShowcase />
-      <StorySection />
-      <PlayfulSection />
-      <InvitationSection />
-      <Footer />
-    </main>
+    <>
+      <StardustBackground />
+      <main className="relative z-10">
+        <HeroSection />
+        <ImageShowcase />
+        <StorySection />
+        <PlayfulSection />
+        <InvitationSection />
+        <Footer />
+      </main>
+    </>
   )
 }

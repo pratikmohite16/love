@@ -18,27 +18,27 @@ export default function InvitationSection() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-3xl md:text-5xl font-serif text-offwhite leading-relaxed"
+            className="text-4xl md:text-6xl font-romantic font-light text-offwhite/90 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            This isn't a grand gesture.
+            This isn&apos;t a grand gesture.
           </motion.p>
 
           <motion.p
-            className="text-3xl md:text-5xl font-serif text-offwhite leading-relaxed"
+            className="text-4xl md:text-6xl font-romantic font-light text-offwhite/90 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            It's just something beautiful.
+            It&apos;s just something beautiful.
           </motion.p>
 
           <motion.p
-            className="text-4xl md:text-6xl font-serif text-gold leading-relaxed"
+            className="text-5xl md:text-7xl font-signature bg-gradient-to-r from-gold via-lightGold to-gold bg-clip-text text-transparent leading-relaxed text-glow"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -57,7 +57,7 @@ export default function InvitationSection() {
           />
 
           <motion.p
-            className="text-2xl md:text-4xl font-light text-offwhite/90 leading-relaxed"
+            className="text-3xl md:text-5xl font-romantic font-light text-offwhite/90 leading-relaxed italic"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -67,13 +67,13 @@ export default function InvitationSection() {
           </motion.p>
 
           <motion.p
-            className="text-2xl md:text-4xl font-light text-rose leading-relaxed"
+            className="text-3xl md:text-5xl font-romantic text-romanticPink leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
             viewport={{ once: true }}
           >
-            I'd still prefer coffee somewhere closer to earth.
+            I&apos;d still prefer coffee somewhere closer to earth.
           </motion.p>
         </motion.div>
 
@@ -86,31 +86,19 @@ export default function InvitationSection() {
         >
           <motion.button
             onClick={() => setRevealed(!revealed)}
-            className="relative px-16 py-5 text-xl font-medium text-midnight bg-gold rounded-full overflow-hidden group"
+            className="relative px-16 py-5 text-2xl font-signature text-midnight bg-gradient-to-r from-gold via-lightGold to-gold rounded-full overflow-hidden group romantic-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10">Maybe Coffee?</span>
 
-            {/* Hover Glow Effect */}
+            {/* Shimmer Effect */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-gold via-white to-gold"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.8 }}
-            />
-
-            {/* Permanent Glow */}
-            <motion.div
-              className="absolute inset-0 rounded-full"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
               animate={{
-                boxShadow: [
-                  '0 0 20px rgba(212, 175, 55, 0.4)',
-                  '0 0 40px rgba(212, 175, 55, 0.8)',
-                  '0 0 20px rgba(212, 175, 55, 0.4)',
-                ],
+                x: ['-200%', '200%'],
               }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
             />
           </motion.button>
         </motion.div>
@@ -126,12 +114,12 @@ export default function InvitationSection() {
               transition={{ duration: 0.6, type: 'spring' }}
             >
               <motion.p
-                className="text-3xl md:text-4xl font-script text-gold leading-relaxed"
+                className="text-4xl md:text-5xl font-signature bg-gradient-to-r from-gold via-lightGold to-gold bg-clip-text text-transparent leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                I promise I'm better in person.
+                I promise I&apos;m better in person.
               </motion.p>
 
               {/* Sparkle Effects */}
